@@ -1,0 +1,28 @@
+{
+  "name": "docs-and-guides",
+  "version": "0.0.1",
+  "description": "Web component documentation and guides",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webcomponents-cg/docs-and-guides.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "docs",
+    "howto",
+    "guides"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webcomponents-cg/docs-and-guides/issues"
+  },
+  "homepage": "https://github.com/webcomponents-cg/docs-and-guides#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "0.12.1"
+  }
+}
