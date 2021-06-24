@@ -24,5 +24,6 @@
   "homepage": "https://github.com/webcomponents-cg/docs-and-guides#readme",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1"
-  }
+  },
+  "dependencies": {}
 }
