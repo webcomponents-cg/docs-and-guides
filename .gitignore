@@ -1,0 +1,19 @@
+# Development files
+node_modules
+npm-debug.log*
+
+# Mac-specific
+.DS_Store
+
+# IDEs
+.vimrc
+.sonarlint
+.history
+
+# Temp files
+*~
+*.swp
+
+# Documentation
+/_site
+
