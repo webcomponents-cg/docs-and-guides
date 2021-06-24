@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
     return {
         dir: {
-            includes: '_components',
+            includes: '_includes',
             input: 'docs',
             layouts: '_layouts',
             output: '_site',

@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run clean && clear && eleventy --serve",
+    "start": "npm run clean && npx eleventy --serve",
     "clean": "rm -rf _site"
   },
   "repository": {
@@ -18,10 +18,12 @@
     "howto",
     "guides"
   ],
-  "contributors": [{
-    "name": "castastrophe",
-    "url": "https://github.com/castastrophe"
-  }],
+  "contributors": [
+    {
+      "name": "castastrophe",
+      "url": "https://github.com/castastrophe"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/webcomponents-cg/docs-and-guides/issues"
