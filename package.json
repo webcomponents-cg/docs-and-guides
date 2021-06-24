@@ -2,9 +2,11 @@
   "name": "docs-and-guides",
   "version": "0.0.1",
   "description": "Web component documentation and guides",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean && clear && eleventy --serve",
+    "clean": "rm -rf _site"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,10 @@
     "howto",
     "guides"
   ],
-  "author": "",
+  "contributors": [{
+    "name": "castastrophe",
+    "url": "https://github.com/castastrophe"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/webcomponents-cg/docs-and-guides/issues"
