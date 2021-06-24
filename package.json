@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "start": "npm run clean && cross-env ELEVENTY_ENV=dev npm-run-all watch:eleventy",
-    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:eleventy",
+    "start": "npm run clean && npm run watch:eleventy",
+    "build": "npm run build:eleventy",
     "bump": "npm --no-git-tag-version version",
     "clean": "rm -rf _site"
   },
