@@ -1,9 +1,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="{{ title }}">
+    <meta name="description" content="{{ title or metadata.title }}">
     <title>{{ title }}</title>
     <!-- <link href="/brand/logo/img.svg" rel="shortcut icon"> -->
 
-    <!-- <link rel="stylesheet" href="/main.css"> -->
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    <link rel="stylesheet" href="/main.css">
 </head>

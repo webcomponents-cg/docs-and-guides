@@ -1,0 +1,45 @@
+<header>
+    <div class="menu-toggle__toggleable site-navigation__outer-wrapper">
+        <input id="mobile-menu-toggle" class="menu-toggle element-invisible" type="checkbox"
+          aria-controls="mobile-menu-menu-container" autocomplete="off">
+        <label class="menu-toggle__button l-header__mobile-menu-toggle" for="mobile-menu-toggle"
+          data-controls="mobile-menu-menu-container">
+          <span class="l-header__burger-icon"></span>
+          <span class="menu-toggle-assistive-text element-invisible">Toggle menu visibility</span>
+        </label>
+        <nav class="l-header__site-navigation site-navigation menu-toggle__toggleable-content-wrapper">
+            <ul class="site-navigation__wrapper">
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link"{% if page.url == "/" %} active{% endif %}
+                        href="/">Listing</a>
+                </li>
+                <li class="site-navigation__item">
+                  <details{% if page.url contains "articles/" %} open{% endif %}>
+                    <summary class="site-navigation__heading">Articles</summary>
+                    <ul class="site-navigation__sub-menu">
+                      {%- for article in collections.article -%}
+                      <li class="site-navigation__sub-menu__item">
+                        <a class="site-navigation__sub-menu__link"{% if page.url == article.url %} active{% endif %}
+                          href="{{ article.url }}">{{ article.data.title }}</a>
+                      </li>
+                      {%- endfor -%}
+                    </ul>
+                    </details>
+                </li>
+                <li class="site-navigation__item">
+                  <details{% if page.url contains "guides/" %} open{% endif %}>
+                    <summary class="site-navigation__heading">Guides</summary>
+                    <ul class="site-navigation__sub-menu">
+                      {%- for guide in collections.guide -%}
+                      <li class="site-navigation__sub-menu__item">
+                        <a class="site-navigation__sub-menu__link"{% if page.url == guide.url %} active{% endif %}
+                          href="{{ guide.url }}">{{ guide.data.title }}</a>
+                      </li>
+                      {%- endfor -%}
+                    </ul>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
