@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Discover",
+    "children": [
+      {
+        "text": "Help and Feedback",
+        "href": "https://github.com/webcomponents-cg/docs-and-guides/issues"
+      }
+    ]
+  },
+  {
+    "name": "Follow",
+    "children": [
+      {
+        "text": "GitHub",
+        "href": "https://github.com/webcomponents-cg/docs-and-guides"
+      },
+      {
+        "text": "Twitter",
+        "href": "https://twitter.com/modern_web_dev"
+      }
+    ]
+  },
+  {
+    "name": "Support",
+    "children": [
+      {
+        "text": "Contribute",
+        "href": "https://github.com/modernweb-dev/rocket/blob/main/CONTRIBUTING.md"
+      }
+    ]
+  }
+]
