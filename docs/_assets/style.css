@@ -3,3 +3,27 @@ html {
   --primary-color-darker: #1d3557;
   --primary-color-lighter: #62a9dc;
 }
+
+@media (prefers-color-scheme: dark) {
+  /* TODO: dark theme markdown colours for code blocks */
+  html {
+    --primary-text-color: #eee;
+
+    /* Contrast colors */
+    --contrast-color-light: #fff;
+    --contrast-color-dark: #1d3557;
+
+    /* background-colors */
+    --page-background: #212121;
+    --footer-background: #333;
+
+    /* typography */
+    --text-color: white;
+
+    /* markdown */
+    --markdown-octicon-link: white;
+    --markdown-syntax-background-color: #a0a0a0;
+    --markdown-link-color: #c9e3ff;
+    --markdown-blockquote-color: #c9e3ff;
+  }
+}
