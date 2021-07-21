@@ -14,10 +14,6 @@
       {
         "text": "GitHub",
         "href": "https://github.com/webcomponents-cg/docs-and-guides"
-      },
-      {
-        "text": "Twitter",
-        "href": "https://twitter.com/modern_web_dev"
       }
     ]
   },
@@ -26,7 +22,7 @@
     "children": [
       {
         "text": "Contribute",
-        "href": "https://github.com/modernweb-dev/rocket/blob/main/CONTRIBUTING.md"
+        "href": "https://github.com/webcomponents-cg/docs-and-guides/blob/main/CONTRIBUTING.md"
       }
     ]
   }
