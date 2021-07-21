@@ -4,6 +4,11 @@ html {
   --primary-color-lighter: #62a9dc;
 }
 
+#footer-badges img,
+#footer-badges svg {
+  width: 145px;
+}
+
 @media (prefers-color-scheme: dark) {
   /* TODO: dark theme markdown colours for code blocks */
   html {
