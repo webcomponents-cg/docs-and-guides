@@ -6,7 +6,8 @@ html {
 
 #footer-badges img,
 #footer-badges svg {
-  width: 145px;
+  max-width: 145px;
+  max-height: 3em;
 }
 
 @media (prefers-color-scheme: dark) {
