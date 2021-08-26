@@ -1,6 +1,6 @@
 name: Use-case content request
 description: Request to add use-case content
-labels: ["use case"]
+labels: ["use case", "documentation"]
 title: "[use-case] "
 body:
     - type: checkboxes
