@@ -1,7 +1,7 @@
-name: Topic request 
-description: Request to add topic content
-labels: ["topic"]
-title: "[topic] "
+name: Specification request for inclusion
+description: Request to add specification content
+labels: ["spec"]
+title: "[spec] "
 body:
     - type: checkboxes
       id: terms
