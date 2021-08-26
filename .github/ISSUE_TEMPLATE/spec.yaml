@@ -1,7 +1,7 @@
 name: Specification request for inclusion
 description: Request to add specification content
-labels: ["spec", "documentation"]
-title: "[spec] "
+labels: [spec, documentation]
+title: '[spec] '
 body:
     - type: checkboxes
       id: terms

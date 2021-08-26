@@ -1,5 +1,5 @@
-name: General request 
-labels: ["question"]
+name: General request
+labels: ['question']
 body:
     - type: checkboxes
       id: terms

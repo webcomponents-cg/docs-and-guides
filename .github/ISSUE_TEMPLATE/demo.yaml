@@ -1,7 +1,7 @@
 name: Request for demo content
 description: Request to add demo content
-labels: ["demo", "documentation"]
-title: "[demo] "
+title: '[demo] '
+labels: [demo, documentation]
 body:
     - type: checkboxes
       id: terms

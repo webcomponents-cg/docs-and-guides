@@ -1,7 +1,7 @@
 name: Topic content request 
 description: Request to add topic content
-labels: ["topic"]
-title: "[topic] "
+labels: [topic, documentation]
+title: '[topic] '
 body:
     - type: checkboxes
       id: terms
