@@ -1,0 +1,28 @@
+name: Use-case content request
+description: Request to add use-case content
+labels: ["use case"]
+title: "[use-case] "
+body:
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: Code of conduct
+          description: By submitting this issue, you agree to follow our [code of conduct](https://www.w3.org/Consortium/cepc/).
+          options:
+              - label: I agree to follow this project's code of conduct.
+                required: true
+    - type: textarea
+      id: details
+      attributes:
+          label: Description of request
+          description: Please tell us about the content you would like to see added to this project. You can attach images or files by clicking this area to highlight it and then dragging files in.
+    - type: input
+      id: link
+      attributes:
+          label: Related link(s)
+    - type: checkboxes
+      id: author
+      attributes:
+          label: Are you interested in authoring this content?
+          options:
+              - label: Yes
