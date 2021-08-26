@@ -25,4 +25,4 @@ body:
       attributes:
           label: Are you interested in authoring this content?
           options:
-              - label: Yes
+              - label: "Yes"
