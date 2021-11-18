@@ -69,5 +69,9 @@
 * Community Protocols
 * Community and Resources
 * FAQ
-  * Myth-busting answers can go here ("can custom elements really only take strings?", etc)
+  * Myth-busting answers can go here
+    * Can custom elements really only take strings?
+    * Is it impossible to SSR web components?
+    * Why don't web components solve ___ that other frameworks do?
+    * ...
 * Demos and Playgrounds (standalone or to accompany each piece of content?)
