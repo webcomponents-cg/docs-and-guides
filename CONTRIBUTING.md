@@ -22,7 +22,7 @@ that the eventual consensus can be turned into official language.
 
 ## Goals and Non-Goals
 
-The main goal of the Web Components Community Group docs-and-guides effort is to provide explaination, advocacy, and documentation of shared web components concepts in a common location that is not tied to any specific web components library.
+The main goal of the Web Components Community Group docs-and-guides effort is to provide explanation, advocacy, and documentation of shared web components concepts in a common location that is not tied to any specific web components library.
 
 This documentation should be ideal for readers interested in learning about web components first - before thinking about libraries; and for web component libraries to reference to cover the standard web components foundations without writing it all themselves.
 
