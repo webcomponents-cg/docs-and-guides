@@ -59,7 +59,7 @@
     * Responding to attribute changes (`attributeChangedCallback`)
     * Responding to property changes (accessors)
     * Considerations about when to use methods
-    * Reflecting properties to attributes
+    * Reflecting between properties and attributes
     * Using events for data
   * Publishing to npm
   * Composition
