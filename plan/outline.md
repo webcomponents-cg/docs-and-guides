@@ -55,7 +55,10 @@
     * Theming
       * Strategies for deep styling
   * Dealing with data
-    * Making reactive properties with accessors
+    * Designing both a property & attribute API
+    * Responding to attribute changes (`attributeChangedCallback`)
+    * Responding to property changes (accessors)
+    * Considerations about when to use methods
     * Reflecting properties to attributes
     * Using events for data
   * Publishing to npm
