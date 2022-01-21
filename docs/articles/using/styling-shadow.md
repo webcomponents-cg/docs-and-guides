@@ -84,6 +84,49 @@ The following will happen:
 
 ## CSS variables
 
+CSS custom properties (colloquially referred to as CSS variables) are used to contain specific values so that they can be reused in other styles.
+They also happen to be one of the few ways to style content inside the shadow DOM tree from outside.
+
+For CSS variables to style content in a shadow DOM tree, component creators must have defined which variables will be used to style what.
+Think of this as a CSS API for the component.
+This way of styling shadow DOM is really useful for use cases such as theming and to give granular control over specific styles.
+
+For example, if you had a `my-button` component with the following shadow DOM:
+
+```html
+<style>
+  button {
+    border: none;
+    padding: 0.5rem;
+    background-color: var(--primary-color, yellowgreen);
+    color: var(--primary-contrast-color, black);
+    border-radius: var(--button-radius, 5px);
+  }
+</style>
+<button type="button">Click me</button>
+```
+
+And you used it in the following way:
+
+```html
+<style>
+  .blue-square {
+    --primary-color: royalblue;
+    --primary-contrast-color: white;
+    --button-radius: 0;
+  }
+</style>
+<my-button></my-button>
+<my-button class="blue-square"></my-button>
+```
+
+The following will happen:
+
+- The first button will be rendered using the defaults for all CSS variables. So, it will be a green button with black text and a slight border radius.
+- The second button will have all the values defined in the CSS class applied to it. So, it will be a blue button with white text and no border radius.
+
+// TODO Add an image or demo?
+
 ## Shadow parts
 
 ## Slotted children
