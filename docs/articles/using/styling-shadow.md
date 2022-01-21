@@ -85,7 +85,7 @@ The following will happen:
 ## CSS variables
 
 CSS custom properties (colloquially referred to as CSS variables) are used to contain specific values so that they can be reused in other styles.
-They also happen to be one of the few ways to style content inside the shadow DOM tree from outside.
+They also happen to be one of the few ways to style content inside a shadow DOM tree from outside.
 
 For CSS variables to style content in a shadow DOM tree, component creators must have defined which variables will be used to style what.
 Think of this as a CSS API for the component.
@@ -128,6 +128,55 @@ The following will happen:
 // TODO Add an image or demo?
 
 ## Shadow parts
+
+Shadow parts are currently the only other way besides using CSS variables to style content inside a shadow DOM tree from outside.
+But unlike CSS variables, shadow parts can be used to set any number of styles to a specific node in the shadow DOM tree.
+
+For example, if you had a `my-profile` component with the following shadow DOM:
+
+```html
+<style>
+  :host {
+    display: flex;
+  }
+  img {
+    width: 48px;
+    height: 48px;
+  }
+  div {
+    color: seagreen;
+  }
+</style>
+
+<img part="avatar" src="https://via.placeholder.com/48x48.jpg?text=Avatar" />
+<div part="name">Some Name</div>
+```
+
+And you used it in the following way:
+
+```html
+<style>
+  my-profile.round::part(avatar) {
+    border-radius: 50%;
+    border: 1px solid mediumpurple;
+  }
+
+  my-profile.round::part(name) {
+    color: mediumpurple;
+    font-weight: bold;
+  }
+</style>
+
+<my-profile></my-profile>
+<my-profile class="round"></my-profile>
+```
+
+The following will happen:
+
+- The first component will render with only the styles defined in the component code. So, a square 48x48 px image and a green text will display;
+- The second component will have both the styles in the component code and the styles from the document itself, but, the styles from the document will have a higher priority. So, a round 48x48 px image with a purple border and a purple bold text will display.
+
+// TODO Add an image or demo?
 
 ## Slotted children
 
