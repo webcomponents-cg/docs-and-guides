@@ -246,6 +246,21 @@ The following will happen:
 
 ## A full example
 
-// TODO maybe use vanilla-colorful including it's text input as an example?
+So far, we went through all the ways to style a web component.
+Let's now see an example of how to style an actual component using every one of those options.
 
-## Conclusion
+Note that not every component will or must have every single customization option enabled.
+It's mostly up to the component's developers to define their CSS API based on factors such as: the component spec and architecture, their target browser versions, integrations with other components, etc.
+
+For this example, we'll be using a component that can be styled using every option.
+The component is `generic-switch` from the [generic components library](https://genericcomponents.netlify.app/generic-switch/demo/index.html) by Pascal Schilp.
+The example uses the following options:
+
+1. Style inheritance to set the `font-family`.
+2. Host styles to set a `margin` for the component.
+3. CSS variables to set `--generic-switch-focus` which controls the `box-shadow` applied when the component is focused.
+4. Shadow parts to style different parts of the component such as the label, switch track, and switch thumb.
+5. Styles applied to the SVG placed inside the label slot.
+
+// TODO embed either this demo or a reproduction created some other way
+// https://webcomponents.dev/edit/hpjULp2AoF9z2myHNu5C/src/index.js?p=stories
