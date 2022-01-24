@@ -180,6 +180,70 @@ The following will happen:
 
 ## Slotted children
 
+Slots are used to place light DOM content into specific points of the shadow DOM tree.
+But content placed in slots isn't completely under the control of web component, so, you can style the slotted content from light DOM.
+
+Note that the web components can also style slotted content through the `::slotted()` selector, but those styles will have lower priority than styles applied in light DOM.
+
+For example, if you had a `my-card` component with the following shadow DOM:
+
+```html
+<style>
+  /*
+  the ::slotted(selector) selector applies to
+  any nodes appended in the indicated slot
+  that match the given selector
+  */
+  header ::slotted(*) {
+    font-size: 1.25rem;
+    text-decoration: underline;
+  }
+  .content ::slotted(.highlight) {
+    color: darkred;
+    font-weight: bold;
+  }
+</style>
+
+<header>
+  <slot name="header"></slot>
+</header>
+<div class="content">
+  <slot></slot>
+</div>
+```
+
+And you used it in the following way:
+
+```html
+<style>
+  .custom .card-header {
+    text-decoration: none;
+  }
+  .custom .card-content {
+    padding: 0.5rem;
+  }
+  .custom .highlight {
+    color: navy;
+  }
+</style>
+
+<my-card>
+  <span slot="header">Header</span>
+  <div>This is some <span class="highlight">content</span></div>
+</my-card>
+<my-card class="custom">
+  <span class="card-header" slot="header">Header</span>
+  <div class="card-content">
+    This is some <span class="highlight">content</span>
+  </div>
+</my-card>
+```
+
+The following will happen:
+
+- The first component will render with only the styles defined in the component code. So, the header will be bigger and underlined and the content will have a red bold highlighted part.
+- The second component will mix the light DOM and shadow DOM styles again and the light DOM styles will be prioritized once more. So, the header will keep it's size but without the underline and the content will have an extra padding and change the highlight color to navy.
+
 ## A full example
 
 // TODO maybe use vanilla-colorful including it's text input as an example?
