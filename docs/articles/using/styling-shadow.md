@@ -45,7 +45,7 @@ The following would happen:
 
 The host node of a component is the gateway between light DOM and the component's shadow DOM.
 As such, styles can be applied to it both from light DOM and from shadow DOM.
-But, styles applies from light DOM will be prioritized over those applied from shadow DOM.
+But styles applied from light DOM will be prioritized over those applied from shadow DOM.
 
 For example, if you had a `my-element` component with the following shadow DOM:
 
@@ -174,7 +174,7 @@ And you used it in the following way:
 The following will happen:
 
 - The first component will render with only the styles defined in the component code. So, a square 48x48 px image and a green text will display;
-- The second component will have both the styles in the component code and the styles from the document itself, but, the styles from the document will have a higher priority. So, a round 48x48 px image with a purple border and a purple bold text will display.
+- The second component will have both the styles in the component code and the styles from the document itself, but the styles from the document will have a higher priority. So, a round 48x48 px image with a purple border and a purple bold text will display.
 
 // TODO Add an image or demo?
 
@@ -242,7 +242,9 @@ And you used it in the following way:
 The following will happen:
 
 - The first component will render with only the styles defined in the component code. So, the header will be bigger and underlined and the content will have a red bold highlighted part.
-- The second component will mix the light DOM and shadow DOM styles again and the light DOM styles will be prioritized once more. So, the header will keep it's size but without the underline and the content will have an extra padding and change the highlight color to navy.
+- The second component will mix the light DOM and shadow DOM styles again and the light DOM styles will be prioritized once more. So, the header will keep its size but without the underline and the content will have an extra padding and change the highlight color to navy.
+
+// TODO Add an image or demo?
 
 ## A full example
 
