@@ -264,5 +264,9 @@ The example uses the following options:
 4. Shadow parts to style different parts of the component such as the label, switch track, and switch thumb.
 5. Styles applied to the SVG placed inside the label slot.
 
-// TODO embed either this demo or a reproduction created some other way
-// https://webcomponents.dev/edit/hpjULp2AoF9z2myHNu5C/src/index.js?p=stories
+<iframe
+  src="https://webcomponents.dev/edit/hpjULp2AoF9z2myHNu5C/src/index.js?embed=1&sv=1&pm=1"
+  title="generic-switch-styling-demo"
+  style="border:0; border-radius: 4px; overflow:hidden; width: 100%; height: 600px;"
+  sandbox="allow-scripts allow-same-origin allow-popups">
+</iframe>
