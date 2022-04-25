@@ -1,10 +1,10 @@
 # Docs Outline
 
-* What are web components
+* What are web components - P0 (single page including sub headings)
   * Custom Elements
   * Shadow DOM
   * Standard JS Modules
-* Why web components
+* Why web components  - P0 (single page including sub headings)
   * What do we mean by interop?
     * Interop with HTML, frameworks, the browser
     * Interop with file formats: Markdown vs MDX, etc.
@@ -14,7 +14,7 @@
     * Standalone components
     * Component sets and design systems
     * Applications
-* Related specs
+* Related specs  - P0 (single page including sub headings)
   * MDN links
   * GitHub repos with proposals
   * What's left, ie. WCCG reports
