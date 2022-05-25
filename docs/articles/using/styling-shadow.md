@@ -4,6 +4,10 @@ Scoping is the main feature of shadow DOM as it allows for a true separation of 
 However, if shadow DOM was completely unaffected by external styles it would severely limit its use cases.
 This article will guide you through the different ways you can style components which are using shadow DOM.
 
+> Note: Whether you can use any of the following options or not will depend on how the component you're using is implemented.
+> Please refer to the component's documentation to see what options are supported.
+> For more information on designing a component's CSS API check our guide on shadow DOM for component authors.
+
 ## Style inheritance
 
 The most basic way you can style content inside shadow DOM is through style inheritance.
@@ -38,8 +42,6 @@ The following would happen:
 - Both texts inside `my-element` would have their `font-family` and `font-size` match the one set to the whole page.
 - The first text would also change it color to brown, but the second would be green as the `color` for it was defined inside the shadow DOM.
 - The `margin` for `my-element` would be unaffected as the `margin` property doesn't inherit.
-
-// TODO Add an image or demo?
 
 ## Host styles
 
@@ -79,8 +81,6 @@ The following will happen:
 
 - Both instances of the component will get an added padding of 8px.
 - Only the second one will get it's border changed to be a red dotted border.
-
-// TODO Add an image or demo?
 
 ## CSS variables
 
@@ -124,8 +124,6 @@ The following will happen:
 
 - The first button will be rendered using the defaults for all CSS variables. So, it will be a green button with black text and a slight border radius.
 - The second button will have all the values defined in the CSS class applied to it. So, it will be a blue button with white text and no border radius.
-
-// TODO Add an image or demo?
 
 ## Shadow parts
 
@@ -175,8 +173,6 @@ The following will happen:
 
 - The first component will render with only the styles defined in the component code. So, a square 48x48 px image and a green text will display;
 - The second component will have both the styles in the component code and the styles from the document itself, but the styles from the document will have a higher priority. So, a round 48x48 px image with a purple border and a purple bold text will display.
-
-// TODO Add an image or demo?
 
 ## Slotted children
 
@@ -244,8 +240,6 @@ The following will happen:
 - The first component will render with only the styles defined in the component code. So, the header will be bigger and underlined and the content will have a red bold highlighted part.
 - The second component will mix the light DOM and shadow DOM styles again and the light DOM styles will be prioritized once more. So, the header will keep its size but without the underline and the content will have an extra padding and change the highlight color to navy.
 
-// TODO Add an image or demo?
-
 ## A full example
 
 So far, we went through all the ways to style a web component.
@@ -267,6 +261,7 @@ The example uses the following options:
 <iframe
   src="https://webcomponents.dev/edit/hpjULp2AoF9z2myHNu5C/src/index.js?embed=1&sv=1&pm=1"
   title="generic-switch-styling-demo"
+  loading="lazy"
   style="border:0; border-radius: 4px; overflow:hidden; width: 100%; height: 600px;"
   sandbox="allow-scripts allow-same-origin allow-popups">
 </iframe>
