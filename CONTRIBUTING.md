@@ -20,6 +20,8 @@ The first step for any substantive contribution is to either:
 Issues are where individual reports and Community Group discussions come together such
 that the eventual consensus can be turned into official language.
 
+> **Note** _For additional context around content and outlining, please see the [plan/](./plan/) directory for more information about our information architecture._
+
 ## Goals and Non-Goals
 
 The main goal of the Web Components Community Group docs-and-guides effort is to provide explanation, advocacy, and documentation of shared web components concepts in a common location that is not tied to any specific web components library.
