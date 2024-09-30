@@ -1,5 +1,5 @@
 ---
-title: Web Component CG
+title: Web Components CG
 layout: layout-home
 slogan: We care about web components.
 callToActionItems:
