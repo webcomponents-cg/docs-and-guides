@@ -1,0 +1,33 @@
+<rocket-drawer id="sidebar">
+	<nav slot="content" id="sidebar-nav">
+		<a class="logo-link" href="/">
+			<img src="/assets/logo.svg" alt="Web Components Community Group Logo">
+			<span>Web Components Community Group at W3C</span>
+		</a>
+		<rocket-navigation>
+			<ul>
+				<li class="menu-item">
+					<a href="/articles/main/">Main</a>
+					<ul>
+						<li class="menu-item">
+							<a href="/articles/main/getting-started/">Getting Started</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a href="/articles/using/">Using Web Components</a>
+					<ul>
+						<li class="menu-item">
+							<a href="/articles/using/styling-shadow/">Styling Components Using Shadow DOM</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="sidebar-bottom">
+				<hr>
+				<launch-dark-switch class="light-dark-switch" label="Toggle darkmode">Toggle darkmode</launch-dark-switch>
+				<a href="https://github.com/webcomponents-cg/docs-and-guides/issues">Help and Feedback</a>
+			</div>
+		</rocket-navigation>
+	</nav>
+</rocket-drawer>

@@ -1,3 +1,7 @@
-# Main >> Getting Started
+---
+layout: layout-articles.njk
+---
+
+# Main: Getting Started
 
 hey there 👋
