@@ -1,3 +1,7 @@
+---
+layout: layout-about.njk
+---
+
 # Specifications
 
 Web components is a meta-specification made possible by four other specifications:

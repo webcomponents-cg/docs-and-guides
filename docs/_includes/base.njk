@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	{% include "sections/head.njk" %}
+	<body layout='layout-{{ layoutType }}'>
+		{% include "sections/header.njk" %}
+
+		{{ content | safe }}
+
+		{% include "sections/footer.njk" %}
+	</body>
+</html>

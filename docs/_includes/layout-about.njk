@@ -1,0 +1,13 @@
+---
+layout: base.njk
+layoutType: index
+---
+
+<div id="content-wrapper">
+	<div class="content-area">
+		{% include "sections/drawer-about.njk" %}
+		<main class="markdown-body">
+			{{ content | safe }}
+		</main>
+	</div>
+</div>

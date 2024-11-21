@@ -1,3 +1,7 @@
+---
+layout: layout-about.njk
+---
+
 # Libraries
 
 ## Why use a web component library?

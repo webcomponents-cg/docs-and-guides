@@ -1,6 +1,6 @@
 ---
 title: Web Components CG
-layout: layout-home
+layout: layout-home.njk
 slogan: We care about web components.
 callToActionItems:
   - text: Read Articles

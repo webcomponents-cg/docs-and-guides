@@ -5,12 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:rocket": "rocket start",
-    "build:rocket": "rocket build",
-    "start": "npm run clean && npm run start:rocket",
-    "build": "npm run clean && npm run build:rocket",
+    "start": "eleventy --serve",
+    "build": "npm run clean && eleventy",
     "bump": "npm --no-git-tag-version version",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -41,8 +39,7 @@
   },
   "homepage": "https://github.com/webcomponents-cg/docs-and-guides#readme",
   "devDependencies": {
-    "@rocket/cli": "^0.9.8",
-    "@rocket/launch": "^0.5.4",
-    "@rocket/search": "^0.4.1"
+	"@11ty/eleventy": "^3.0.0",
+	"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
   }
 }

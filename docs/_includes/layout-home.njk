@@ -1,0 +1,34 @@
+---
+layout: base.njk
+layoutType: home
+---
+
+<div id="content-wrapper">
+	<div class="content-area">
+		{% include "sections/drawer-home.njk" %}
+		<main class="markdown-body">
+			<img class="page-logo" src="/assets/logo.svg" alt=" Logo">
+			<h1 class="page-title">Web Components CG</h1>
+			<p class="page-slogan">We care about web components.</p>
+			<div class="call-to-action-list" role="list">
+				<a class="call-to-action" href="/articles/" role="listitem">Read Articles</a>
+			</div>
+			<h2 class="reason-header">Why a Community Group?</h2>
+			<section class="reasons">
+				<article>
+					<h3>Connect</h3>
+					This group is for collaboration between people working on web components libraries, tools, documentation and standards.
+				</article>
+				<article>
+					<h3>Collaborate</h3>
+					Areas we expect to work on include gap analysis, design principles, common protocols, discoverability and quality, documentation, tooling, and more.
+				</article>
+				<article>
+					<h3>Common Problems</h3>
+					We will work together on projects of shared interest in order to enhance interoperability, solve common problems, build shared community resources, and ultimately continue to grow a cooperative, productive, and happy web components ecosystem.
+				</article>
+			</section>
+			{{ content | safe }}
+		</main>
+	</div>
+</div>

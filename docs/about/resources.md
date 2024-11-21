@@ -1,3 +1,7 @@
+---
+layout: layout-about.njk
+---
+
 # Resources
 
 The WebComponents.org Resources section is a place to showcase useful tools and boilerplates to easily start hacking on your own custom elements.

@@ -1,4 +1,8 @@
-# Using Web Components >> Styling Components Using Shadow DOM
+---
+layout: layout-articles.njk
+---
+
+# Using Web Components: Styling Components Using Shadow DOM
 
 Scoping is the main feature of shadow DOM as it allows for a true separation of concerns between the page styles and the component styles.
 However, if shadow DOM was completely unaffected by external styles it would severely limit its use cases.

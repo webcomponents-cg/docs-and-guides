@@ -1,3 +1,7 @@
+---
+layout: layout-about.njk
+---
+
 # Introduction
 
 ## What are web components?
