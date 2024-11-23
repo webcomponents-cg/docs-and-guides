@@ -249,7 +249,7 @@
   
   /** SIDEBAR ***************************************************************************************/
   #sidebar {
-	display: none; /* for loading */
+    display: none;
   }
   
   #sidebar-nav {
@@ -400,6 +400,10 @@
 	  scroll-behavior: smooth;
 	  min-width: 270px;
 	  z-index: 10;
+	  background: none;
+	  border: none;
+	  padding: 0;
+	  margin: 0;
 	  margin-right: 50px;
 	}
   
