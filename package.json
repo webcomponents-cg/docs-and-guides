@@ -41,6 +41,8 @@
   "devDependencies": {
 	"@11ty/eleventy": "^3.0.0",
 	"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+	"markdown-it": "^14.1.0",
+	"markdown-it-anchor": "^9.2.0",
 	"rimraf": "^6.0.1"
   }
 }
