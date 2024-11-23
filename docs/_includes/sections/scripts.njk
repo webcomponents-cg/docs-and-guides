@@ -1,0 +1,70 @@
+<script>
+	const templateDefault = document.createElement("template");
+	templateDefault.innerHTML = /*html*/`<slot></slot>`;
+	const templateToggles = document.createElement("template");
+	templateToggles.innerHTML = /*html*/`
+		<dialog id="dialog" closedby="any"><div id="container"><slot></slot></div></dialog>
+	`;
+	const togglesStyles = new CSSStyleSheet();
+	togglesStyles.replaceSync(/*css*/`
+		:host {
+			display: block !important;
+		}
+		dialog {
+			all: unset;
+			transition:
+				display 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+				overlay 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+			transition-behavior: allow-discrete;
+		}
+		::slotted(*) {
+			will-change: translate;
+			transition: translate 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+			translate: -100%;
+		}
+		dialog:not(:modal) { display: none; }
+		dialog:modal {
+			::slotted(*) {
+				translate: 0;
+			}
+			@starting-style {
+				::slotted(*) {
+					translate: -100%;
+				}
+			}
+		}
+	`);
+  customElements.define('wccg-navigation', class extends HTMLElement {
+	constructor() {
+		super();
+		const query = matchMedia('(max-width: 1024px)');
+		query.addEventListener('change', this.handleMatchMediaChange);
+		this.handleMatchMediaChange(query);
+		if (!('closedBy' in HTMLDialogElement.prototype)) {
+			this.addEventListener('click', this.handleClick);
+		}
+	}
+
+	handleClick(e) {
+		const isClosingClick = !e.composedPath().find(el => el.id === 'container');
+		if (isClosingClick) {
+			this.shadowRoot.querySelector('dialog')?.close();
+		}
+	}
+
+	handleMatchMediaChange = (e) => {
+		if (e.matches) {
+			this.shadowRoot.replaceChildren(templateToggles.content.cloneNode(true));
+			this.shadowRoot.adoptedStyleSheets = [togglesStyles];
+		} else {
+			this.shadowRoot.replaceChildren(templateDefault.content.cloneNode(true));
+			this.shadowRoot.adoptedStyleSheets = [];
+
+		}
+	}
+
+	showModal() {
+		this.shadowRoot.querySelector('dialog')?.showModal();
+	}
+  })
+</script>

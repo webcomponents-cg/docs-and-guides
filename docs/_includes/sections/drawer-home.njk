@@ -1,7 +1,8 @@
-<rocket-drawer id="sidebar">
-	<nav slot="content" id="sidebar-nav">
+<wccg-navigation id="sidebar">
+	<template shadowrootmode="open"><slot></slot></template>
+	<nav id="sidebar-nav">
 		<a class="logo-link" href="/">
-			<img src="/assets/logo.svg.svg" alt="Web Components Community Group Logo">
+			<img src="/assets/logo.svg" alt="Web Components Community Group Logo">
 			<span>Web Components Community Group at W3C</span>
 		</a>
 		<rocket-navigation>
@@ -20,4 +21,4 @@
 			</div>
 		</rocket-navigation>
 	</nav>
-</rocket-drawer>
+</wccg-navigation>
